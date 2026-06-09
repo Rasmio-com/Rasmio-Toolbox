@@ -1,0 +1,145 @@
+import type { ToolMeta } from "../types";
+
+export const items: ToolMeta[] = [
+  {
+    id: "timezone-converter",
+    title: "تبدیل منطقه زمانی",
+    titleEn: "Timezone Converter",
+    description:
+      "تبدیل تاریخ و ساعت میان مناطق زمانی مختلف (IANA) شامل Asia/Tehran با Intl.DateTimeFormat",
+    category: "datetime",
+    keywords: [
+      "timezone",
+      "منطقه زمانی",
+      "tehran",
+      "تهران",
+      "utc",
+      "iana",
+      "ساعت",
+      "convert",
+    ],
+  },
+  {
+    id: "date-diff",
+    title: "اختلاف تاریخ",
+    titleEn: "Date Difference",
+    description:
+      "محاسبه‌ی اختلاف دو تاریخ به روز، هفته، ماه، سال و ساعت و افزودن یا کم کردن روز و ماه",
+    category: "datetime",
+    keywords: [
+      "date diff",
+      "اختلاف تاریخ",
+      "روز",
+      "days",
+      "add",
+      "subtract",
+      "محاسبه تاریخ",
+    ],
+  },
+  {
+    id: "date-info",
+    title: "اطلاعات تاریخ",
+    titleEn: "Date Info",
+    description:
+      "شماره‌ی هفته‌ی ISO، روز سال، سه‌ماهه، نام روز هفته (فارسی) و تشخیص سال کبیسه",
+    category: "datetime",
+    keywords: [
+      "date info",
+      "week number",
+      "هفته",
+      "روز سال",
+      "leap year",
+      "کبیسه",
+      "quarter",
+      "سه‌ماهه",
+    ],
+  },
+  {
+    id: "duration-formatter",
+    title: "قالب‌بند مدت‌زمان",
+    titleEn: "Duration Formatter",
+    description:
+      "تبدیل ثانیه یا میلی‌ثانیه به قالب خوانا و ISO-8601 (PT1H2M3S) و تجزیه‌ی متن مانند 1h2m",
+    category: "datetime",
+    keywords: [
+      "duration",
+      "مدت زمان",
+      "iso 8601",
+      "format",
+      "seconds",
+      "ثانیه",
+      "parse",
+    ],
+  },
+  {
+    id: "relative-time",
+    title: "زمان نسبی",
+    titleEn: "Relative Time",
+    description:
+      "نمایش فاصله‌ی زمانی به‌صورت نسبی مانند «۳ روز پیش» با Intl.RelativeTimeFormat فارسی",
+    category: "datetime",
+    keywords: [
+      "relative time",
+      "زمان نسبی",
+      "ago",
+      "پیش",
+      "intl",
+      "fa",
+      "since",
+    ],
+  },
+  {
+    id: "stopwatch",
+    title: "کرنومتر",
+    titleEn: "Stopwatch",
+    description:
+      "کرنومتر دقیق با شروع، توقف، بازنشانی و ثبت دورها به‌صورت mm:ss.cs با performance.now",
+    category: "datetime",
+    keywords: [
+      "stopwatch",
+      "کرنومتر",
+      "timer",
+      "lap",
+      "دور",
+      "زمان‌سنج",
+      "chronometer",
+    ],
+  },
+  {
+    id: "countdown-timer",
+    title: "تایمر شمارش معکوس",
+    titleEn: "Countdown Timer",
+    description:
+      "شمارش معکوس زنده بر اساس مدت‌زمان یا تاریخ هدف همراه با اعلان پایان زمان",
+    category: "datetime",
+    keywords: [
+      "countdown",
+      "شمارش معکوس",
+      "timer",
+      "تایمر",
+      "alarm",
+      "هدف",
+      "deadline",
+    ],
+  },
+  {
+    id: "jalali-converter",
+    title: "مبدل تاریخ شمسی و میلادی",
+    titleEn: "Jalali ↔ Gregorian Date",
+    description:
+      "تبدیل تاریخ شمسی (جلالی) و میلادی با انتخابگر تاریخ و جعبه‌ی تبدیل سریع (نوشتن یا چسباندن)",
+    category: "datetime",
+    keywords: [
+      "jalali",
+      "shamsi",
+      "شمسی",
+      "جلالی",
+      "میلادی",
+      "gregorian",
+      "تقویم",
+      "date",
+      "تاریخ",
+    ],
+    featured: true,
+  },
+];

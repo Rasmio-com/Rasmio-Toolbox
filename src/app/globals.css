@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces — deep slate with a faint teal undertone */
+  --color-bg: #0a0f14;
+  --color-bg-soft: #0e141b;
+  --color-surface: #121a22;
+  --color-surface-2: #17212b;
+  --color-surface-3: #1e2a35;
+  --color-border: #243039;
+  --color-border-soft: #1a242d;
+
+  /* Text */
+  --color-fg: #e7eef3;
+  --color-muted: #91a2af;
+  --color-faint: #5f6e7a;
+
+  /* Persian accents — turquoise (فیروزه) + saffron (زعفران) */
+  --color-turquoise: #2dd4c4;
+  --color-turquoise-bright: #4ce7d8;
+  --color-turquoise-dim: #149b8e;
+  --color-saffron: #f2a93b;
+  --color-saffron-bright: #ffc465;
+
+  /* Semantic */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-info: #38bdf8;
+
+  --color-ring: #2dd4c4;
+
+  /* Typography (CSS vars injected by next/font in layout.tsx) */
+  --font-sans: var(--font-vazir), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, "JetBrains Mono", monospace;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--color-fg);
+    background-color: var(--color-bg);
+    background-image:
+      radial-gradient(
+        60rem 40rem at 12% -10%,
+        color-mix(in oklab, var(--color-turquoise) 13%, transparent),
+        transparent 60%
+      ),
+      radial-gradient(
+        50rem 35rem at 95% -5%,
+        color-mix(in oklab, var(--color-saffron) 9%, transparent),
+        transparent 55%
+      );
+    background-attachment: fixed;
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01";
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Persian geometric lattice overlay (subtle) */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%232dd4c4' stroke-width='1'%3E%3Crect x='15' y='15' width='30' height='30'/%3E%3Cpath d='M30 6 L54 30 L30 54 L6 30 Z'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 60px 60px;
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);
+    mask-image: linear-gradient(to bottom, black, transparent 80%);
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-turquoise) 35%, transparent);
+    color: #fff;
+  }
+
+  /* Scrollbars */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-surface-3) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-surface-3);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--color-faint);
+    background-clip: padding-box;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+
+  /* Latin numerals & code render in mono even inside RTL text */
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  .glass {
+    background: color-mix(in oklab, var(--color-bg) 72%, transparent);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  /* Reusable IO field used across tools */
+  .field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-soft);
+    padding: 0.625rem 0.875rem;
+    color: var(--color-fg);
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease,
+      background 0.15s ease;
+  }
+  .field::placeholder {
+    color: var(--color-faint);
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-turquoise-dim);
+    box-shadow: 0 0 0 3px
+      color-mix(in oklab, var(--color-turquoise) 18%, transparent);
+  }
+  .field-mono {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-rise {
+    animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}

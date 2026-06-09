@@ -1,0 +1,68 @@
+import type { ToolMeta } from "../types";
+
+export const items: ToolMeta[] = [
+  {
+    id: "sql-formatter",
+    title: "قالب‌بند SQL",
+    titleEn: "SQL Formatter",
+    description: "زیباسازی پرس‌وجوی SQL با بزرگ‌کردن کلیدواژه‌ها، خط جدید پیش از بندها و تورفتگی؛ به‌همراه گزینهٔ فشرده‌سازی.",
+    category: "code",
+    keywords: ["sql", "formatter", "قالب‌بندی", "minify", "pretty", "query", "زیباسازی", "پایگاه داده"],
+  },
+  {
+    id: "cron-parser",
+    title: "تفسیرگر Cron",
+    titleEn: "Cron Parser",
+    description: "تجزیه عبارت cron پنج‌بخشی، توضیح فارسی آن و محاسبهٔ پنج زمان اجرای بعدی.",
+    category: "code",
+    keywords: ["cron", "crontab", "زمان‌بندی", "schedule", "تفسیر", "next run", "اجرا"],
+  },
+  {
+    id: "semver-checker",
+    title: "بررسی SemVer",
+    titleEn: "SemVer Checker",
+    description: "اعتبارسنجی نسخه، مقایسهٔ دو نسخه و آزمون سازگاری یک نسخه با بازه (^، ~، >=، x).",
+    category: "code",
+    keywords: ["semver", "version", "نسخه", "مقایسه", "range", "بازه", "npm", "اعتبارسنجی"],
+  },
+  {
+    id: "mime-lookup",
+    title: "جست‌وجوی MIME",
+    titleEn: "MIME Type Lookup",
+    description: "یافتن نوع MIME از روی پسوند فایل و بالعکس، با جدول جست‌وجوپذیر حدود ۸۰ نوع رایج.",
+    category: "code",
+    keywords: ["mime", "content-type", "پسوند", "extension", "نوع فایل", "lookup", "جست‌وجو"],
+  },
+  {
+    id: "glob-tester",
+    title: "آزمونگر Glob",
+    titleEn: "Glob Tester",
+    description: "آزمودن الگوی glob روی فهرستی از مسیرها و نمایش مسیرهای منطبق (*، **، ?، [abc]، {a,b}).",
+    category: "code",
+    keywords: ["glob", "pattern", "الگو", "match", "wildcard", "path", "مسیر", "آزمون"],
+  },
+  {
+    id: "gitignore-tester",
+    title: "آزمونگر gitignore",
+    titleEn: ".gitignore Tester",
+    description: "بررسی اینکه آیا یک مسیر بر اساس قوانین ‎.gitignore نادیده گرفته می‌شود (با پشتیبانی از نفی ! و dir/).",
+    category: "code",
+    keywords: ["gitignore", "git", "ignore", "نادیده", "negation", "pattern", "مسیر", "آزمون"],
+  },
+  {
+    id: "stack-trace-formatter",
+    title: "قالب‌بند Stack Trace",
+    titleEn: "Stack Trace Formatter",
+    description: "پاک‌سازی و مرتب‌سازی ردپای خطای JavaScript، Java یا Python با هم‌ترازی فریم‌ها.",
+    category: "code",
+    keywords: ["stack trace", "خطا", "error", "formatter", "javascript", "java", "python", "ردپا"],
+  },
+  {
+    id: "dotenv-validator",
+    title: "اعتبارسنج .env",
+    titleEn: ".env Validator",
+    description: "بررسی خطوط KEY=VALUE، گزارش مشکلات (کلید نامعتبر، فاصله، تکراری) و نمایش جدول کلید/مقدار.",
+    category: "code",
+    keywords: ["dotenv", "env", "متغیر محیطی", "validate", "اعتبارسنجی", "config", "key value"],
+  },
+];

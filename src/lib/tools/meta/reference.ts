@@ -1,0 +1,133 @@
+import type { ToolMeta } from "../types";
+
+export const items: ToolMeta[] = [
+  {
+    id: "cheatsheets",
+    title: "برگه‌های تقلب",
+    titleEn: "Cheatsheets",
+    description:
+      "برگه‌های تقلب دستورها برای Git، Docker، Kubernetes، Linux، Bash، Cron، Markdown و SQL با جست‌وجو.",
+    category: "reference",
+    keywords: [
+      "cheatsheet",
+      "برگه تقلب",
+      "git",
+      "docker",
+      "kubernetes",
+      "linux",
+      "bash",
+      "cron",
+      "sql",
+      "دستور",
+    ],
+  },
+  {
+    id: "ascii-table",
+    title: "جدول ASCII",
+    titleEn: "ASCII Table",
+    description:
+      "جدول کامل ASCII از ۰ تا ۱۲۷ شامل مقدار ده‌دهی، هگز، اکتال، کاراکتر و توضیح، با قابلیت جست‌وجو.",
+    category: "reference",
+    keywords: [
+      "ascii",
+      "اسکی",
+      "table",
+      "جدول",
+      "hex",
+      "octal",
+      "character",
+      "code",
+      "کاراکتر",
+    ],
+  },
+  {
+    id: "emoji-picker",
+    title: "انتخابگر ایموجی",
+    titleEn: "Emoji Picker",
+    description:
+      "مجموعه‌ای از ایموجی‌های پرکاربرد دسته‌بندی‌شده با نام؛ جست‌وجو و کپی با یک کلیک.",
+    category: "reference",
+    keywords: [
+      "emoji",
+      "ایموجی",
+      "picker",
+      "انتخاب",
+      "copy",
+      "smiley",
+      "نماد",
+      "شکلک",
+    ],
+  },
+  {
+    id: "html-entities-reference",
+    title: "مرجع موجودیت‌های HTML",
+    titleEn: "HTML Entities Reference",
+    description:
+      "فهرست موجودیت‌های رایج HTML شامل نام، کاراکتر و کد ده‌دهی/هگز با جست‌وجو و کپی.",
+    category: "reference",
+    keywords: [
+      "html entities",
+      "موجودیت",
+      "entity",
+      "nbsp",
+      "amp",
+      "reference",
+      "مرجع",
+      "کاراکتر",
+    ],
+  },
+  {
+    id: "ports-reference",
+    title: "مرجع پورت‌ها",
+    titleEn: "Common Ports",
+    description:
+      "فهرست پورت‌های رایج TCP/UDP شامل شماره پورت، پروتکل، سرویس و توضیح فارسی با جست‌وجو.",
+    category: "reference",
+    keywords: [
+      "ports",
+      "پورت",
+      "tcp",
+      "udp",
+      "service",
+      "network",
+      "reference",
+      "مرجع",
+    ],
+  },
+  {
+    id: "mime-reference",
+    title: "مرجع MIME",
+    titleEn: "MIME Types Reference",
+    description:
+      "فهرست انواع رایج MIME شامل نوع، پسوند معمول و توضیح فارسی با قابلیت جست‌وجو.",
+    category: "reference",
+    keywords: [
+      "mime",
+      "content type",
+      "نوع محتوا",
+      "extension",
+      "پسوند",
+      "reference",
+      "مرجع",
+    ],
+  },
+  {
+    id: "html-symbols",
+    title: "نمادهای ویژه",
+    titleEn: "Special Symbols",
+    description:
+      "نمادهای ویژه در دسته‌های فلش، ریاضی، ارز، نشانه‌گذاری و ستاره؛ کلیک برای کپی کاراکتر و موجودیت HTML.",
+    category: "reference",
+    keywords: [
+      "symbols",
+      "نماد",
+      "arrows",
+      "math",
+      "currency",
+      "ارز",
+      "punctuation",
+      "star",
+      "ستاره",
+    ],
+  },
+];

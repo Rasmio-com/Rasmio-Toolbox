@@ -26,3 +26,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# GeoIP databases (large, auto-downloaded by scripts/update-geoip.mjs)
+data/geoip/*.mmdb
